@@ -1,6 +1,6 @@
 ---
-title: {{ title }}
-date: {{ date }}
+title: Cloud
+date: 2018-07-27 14:47:55
 tags: [aws, cloud]
 categories:
 - [AWS]
