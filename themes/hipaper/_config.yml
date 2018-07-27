@@ -9,7 +9,6 @@ menu:
   Categories: categories
   Tags: tags
   About: about
-rss: /atom.xml
 
 
 # Set default keywords (Use a comma to separate)
@@ -34,7 +33,7 @@ about_big_image: [css/images/pose01.jpg, https://source.unsplash.com/collection/
 
 
 # Homepage thumbnail
-random_thumb: false
+random_thumb: true
 
 
 # Content
@@ -56,25 +55,21 @@ widgets:
 # Key is the name of FontAwsome icon.
 # Value is the target link (E.g. GitHub: https://github.com/iTimeTraveler)
 social:
-  Github: https://github.com/iTimeTraveler
-  Weibo: 
-  Twitter: 
-  Facebook: 
-  Google-plus: 
-  Instagram: 
+  Github: https://github.com/bgreengo
+  Twitter: https://twitter.com/TSgt_Green
+
 
 
 # Search
 search:
     insight: true # you need to install `hexo-generator-json-content` before using Insight Search
     swiftype: # enter swiftype install key here
-    baidu: false # you need to disable other search engines to use Baidu search, options: true, false
 
 
 # comment ShortName, you can choose only ONE to display.
 duoshuo_shortname: 
 disqus_shortname: 
-livere_shortname: MTAyMC8yOTQ4MS82MDQ5
+livere_shortname: 
 uyan_uid: 
 wumii: 
 
@@ -93,15 +88,11 @@ show_count: true
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
 google_site_verification:
-baidu_site_verification:
-qihu_site_verification:
+
 
 # Miscellaneous
 google_analytics:
 gauges_analytics:
-baidu_analytics:
-tencent_analytics:
-busuanzi_analytics: true
 twitter:
 google_plus:
 fb_admins:
@@ -116,5 +107,4 @@ facebook_sdk:
   like_button:  #true
   webmaster:    #true
 
-# CNZZ count
-cnzz_siteid: 1260716016
+
