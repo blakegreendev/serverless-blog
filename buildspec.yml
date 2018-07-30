@@ -14,4 +14,4 @@ phases:
 
   post_build: 
     commands:
-      - cd public/ && aws s3 sync . s3://serverless-bgreen-blog/
+      - cd public/ && aws s3 sync . s3://blog.greengotech.net/
