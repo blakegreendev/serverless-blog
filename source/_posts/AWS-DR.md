@@ -15,7 +15,7 @@ flame that’s always on can quickly ignite the entire furnace to heat up a hous
 
 This scenario has a running EC2 instance running in US-West-2 while a preconfigured AMI is stopped in US-East-1. In the event of a failure, which in this case is initated by stopping the running instance, the instance in US-East-1 is automatically started and Route 53 redirects traffic to the failover instance. 
 
-![greenshot 2018-07-06 15 10 54](https://user-images.githubusercontent.com/23042063/42403841-0408b49a-8139-11e8-8434-c13dac0b633f.png)
+![AWS DR](https://user-images.githubusercontent.com/23042063/42403841-0408b49a-8139-11e8-8434-c13dac0b633f.png)
 
 {% youtube tXNWMlKe1Do %}
 
@@ -26,5 +26,5 @@ This scenario has a running EC2 instance running in US-West-2 while a preconfigu
 4. Lambda starts instance in US-East-1
 5. Route 53 serves traffic to failover instance
 
-
+Here is a link to the CloudFormation templates on [Github](https://github.com/bgreengo/aws-dr)
 
