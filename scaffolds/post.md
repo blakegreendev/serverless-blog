@@ -1,7 +1,7 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags: [aws, cloud]
+tags: [aws]
 categories:
 - [AWS]
 - [Serverless]
