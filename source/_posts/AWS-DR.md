@@ -1,5 +1,5 @@
 ---
-title: AWS-DR
+title: AWS DR
 tags:
   - aws
 categories:
@@ -15,11 +15,13 @@ flame that’s always on can quickly ignite the entire furnace to heat up a hous
 
 This scenario has a running EC2 instance running in US-West-2 while a preconfigured AMI is stopped in US-East-1. In the event of a failure, which in this case is initated by stopping the running instance, the instance in US-East-1 is automatically started and Route 53 redirects traffic to the failover instance. 
 
+## DR Diagram
 ![AWS DR](https://user-images.githubusercontent.com/23042063/42403841-0408b49a-8139-11e8-8434-c13dac0b633f.png)
 
+## DR Video Demo
 {% youtube tXNWMlKe1Do %}
 
-### Here's the sequence of events in this scenario:
+## Sequence of events in this scenario:
 1. Stopped instance in US-West-2 to initiate failover
 2. Route 53 health check becomes unhealthy
 3. SNS notification goes to subscribers and invokes Lambda function
