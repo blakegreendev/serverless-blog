@@ -7,6 +7,8 @@ categories:
 date: 2018-08-01 08:49:48
 ---
 
+{% asset_img certs.png %}
+
 Certifications are important in the IT world. They are validation that you've put in the time to learn new skills. I want to share my certification experiences and what I did to achieve them. 
 
 For each certification, I used [A Cloud Guru](https://acloud.guru/) and [Linux Academy](https://linuxacademy.com/) for cert specific courses. I also watched a ton of re:Invent sessions on YouTube along with reading whitepapers and forums. [Jayendra's Blog](http://jayendrapatil.com/) was also critical to my sucess. 
