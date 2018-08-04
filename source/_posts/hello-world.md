@@ -1,5 +1,5 @@
 ---
-title: Hello World
+title: GreengoTech Blog
 tags: [aws]
 categories:
 - [AWS]
@@ -10,11 +10,13 @@ categories:
 - [Config Mgmt]
 ---
 
-# Welcome to the GreengoTech Blog
+I've come to the realization that I'm going to be learning for the rest of my life. Along the way, I will fail. The challenge is not overcoming failure but treating every failure as an opportunity to get better. I appreciate the military for teaching me to be resilient and being able to bounce back. I also admire legends in the IT world, like Kelsey Hightower, who support this perspective:
 
-I believe in failing fast, not for the sake of wasting time, but for the sake of gaining more information than what I had before. Failing without learning is just failure, but failing with pride, excitement, and a hunger to learn more is the seed to success.
+{% blockquote @kelseyhightower https://twitter.com/kelseyhightower/status/1022860807783104512 %}
+It's the mistakes that make it perfect.
+{% endblockquote %}
 
-I've accepted the fact that I'm going to be learning for the rest of my life, so this blog is focused on learning new technology in the cloud space, specifically with AWS. I plan to capture everything from serverless to containers. Heck, even serverless containers! 
+Never the master, always the student. This blog is focused on learning (and sometimes failing) new technology in the cloud space, specifically with AWS. 
 
 Please reach out to me directly @ greengotechnet@gmail.com or in the social media links to the right!
 
