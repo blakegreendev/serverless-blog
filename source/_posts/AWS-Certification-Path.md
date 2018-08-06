@@ -2,6 +2,7 @@
 title: AWS Certification Path
 tags:
   - aws
+  - certification
 categories:
   - - AWS
 date: 2018-08-01 08:49:48

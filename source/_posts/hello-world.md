@@ -16,7 +16,7 @@ I've come to the realization that I'm going to be learning for the rest of my li
 It's the mistakes that make it perfect.
 {% endblockquote %}
 
-Never the master, always the student. This blog is focused on learning (and sometimes failing) new technology in the cloud space, specifically with AWS. 
+Never the master, always the student. This blog is focused on learning (and sometimes failing) new technology in the cloud space, specifically with AWS. I'd also like to mention that this blog is entirely serverless on AWS, which will likely be a blog post topic.
 
 Please reach out to me directly @ greengotechnet@gmail.com or in the social media links to the right!
 

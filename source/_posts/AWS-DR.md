@@ -2,9 +2,10 @@
 title: AWS DR
 tags:
   - aws
+  - disaster recovery
 categories:
   - - AWS
-date: 2018-07-30 13:30:50
+date: 2018-08-02 13:30:50
 ---
 
 # AWS Disaster Recovery
