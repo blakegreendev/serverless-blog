@@ -2,10 +2,11 @@
 title: Automate All The Things - Part 1
 tags:
   - aws
+  - terraform
+  - cloudformation
 categories:
   - - AWS
-  - - Serverless
-  - - Containers
+  - - IaC
   - - CI/CD
 date: 2018-08-03 08:28:03
 ---
