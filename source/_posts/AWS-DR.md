@@ -1,5 +1,5 @@
 ---
-title: AWS DR
+title: AWS Disaster Recovery
 tags:
   - aws
   - disaster recovery
@@ -8,11 +8,7 @@ categories:
 date: 2018-08-02 13:30:50
 ---
 
-# AWS Disaster Recovery
-
-The term pilot light is often used to describe a DR scenario in which a minimal version of an environment is always
-running in the cloud. The idea of the pilot light is an analogy that comes from the gas heater. In a gas heater, a small
-flame that’s always on can quickly ignite the entire furnace to heat up a house.
+The term pilot light is often used to describe a DR scenario in which a minimal version of an environment is always running in the cloud. The idea of the pilot light is an analogy that comes from the gas heater. In a gas heater, a small flame that’s always on can quickly ignite the entire furnace to heat up a house.
 
 This scenario has a running EC2 instance running in US-West-2 while a preconfigured AMI is stopped in US-East-1. In the event of a failure, which in this case is initated by stopping the running instance, the instance in US-East-1 is automatically started and Route 53 redirects traffic to the failover instance. 
 
@@ -27,7 +23,7 @@ This scenario has a running EC2 instance running in US-West-2 while a preconfigu
 2. Route 53 health check becomes unhealthy
 3. SNS notification goes to subscribers and invokes Lambda function
 4. Lambda starts instance in US-East-1
-5. Route 53 serves traffic to failover instance
+5. Route 53 serves traffic to failover instance in US-East-1
 
 Here is a link to the CloudFormation templates on [Github](https://github.com/bgreengo/aws-dr)
 

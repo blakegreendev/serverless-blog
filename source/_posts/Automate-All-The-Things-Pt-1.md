@@ -23,3 +23,5 @@ The two primary IaC tools I became familiar with were AWS CloudFormation and Ter
 I would go through all the manual steps I would take to deploy resources and then I would "codify" the steps into a template. It was a bit more work upfront but I started to assemble these templates to automate a lot of manual tasks which allowed me to be more efficient with my time. This has become extremely useful because I'm able to take templates that I've created, use them as a starting point to modify, and reuse them on other projects. 
 
 In Part 2 of this post, I will demo one of my first templates I wrote using Terraform. I used Terraform to deploy the underlying infrastructure for an immutable Wordpress website. More details to follow!
+
+![Let's Go!](https://media.giphy.com/media/p6onj14CgwG2s/giphy.gif)
