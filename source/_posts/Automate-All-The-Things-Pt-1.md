@@ -24,4 +24,3 @@ I would go through all the manual steps I would take to deploy resources and the
 
 In Part 2 of this post, I will demo one of my first templates I wrote using Terraform. I used Terraform to deploy the underlying infrastructure for an immutable Wordpress website. More details to follow!
 
-![Let's Go!](https://media.giphy.com/media/p6onj14CgwG2s/giphy.gif)

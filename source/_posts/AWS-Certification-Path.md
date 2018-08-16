@@ -12,11 +12,11 @@ date: 2018-08-01 08:49:48
 
 Certifications are important in the IT world. They are validation that you've put in the time to learn new skills. I want to share my certification experiences and what I did to achieve them. 
 
+I was a complete "newb" to cloud computing and didn't have any experience. The company was moving toward the cloud and I knew I had to jump on board or get left behind. That was motivation in itself and I quickly sought out any training I could get my hands on. I remember sitting through the Cloud Guru course where the instructor spun up a Wordpress site in the Austrailia region. I thought that was the coolest thing in the world and I tried it myself. I was obsessed from that point on and continued to learn what all the other services did. 
+
 For each certification, I used [A Cloud Guru](https://acloud.guru/) and [Linux Academy](https://linuxacademy.com/) for cert specific courses. I also watched a ton of re:Invent sessions on YouTube along with reading whitepapers and forums. [Jayendra's Blog](http://jayendrapatil.com/) was also critical to my sucess. 
 
 #  AWS Certified Soultions Architect - Associate
-
-I was a complete "newb" to cloud computing and didn't have any experience. The company was moving toward the cloud and I knew I had to jump on board or get left behind. That was motivation in itself and I quickly sought out any training I could get my hands on. I remember sitting through the Cloud Guru course where the instructor spun up a Wordpress site in the Austrailia region. I thought that was the coolest thing in the world and I tried it myself. I was obsessed from that point on and continued to learn what all the other services did. 
 
 I didn't tell anyone at the company that I was studying for the CSA-A exam because I would have been embarrassed to tell them I failed. But I studied like no other and passed the exam! Passing the exam was like my ticket through the gates. It opened the door to allow me to be on more cloud projects which gave me the experience to continue on my certificaiton path. 
 
