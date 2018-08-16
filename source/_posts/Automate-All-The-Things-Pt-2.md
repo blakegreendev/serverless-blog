@@ -68,9 +68,7 @@ Finish up the install with the site information and BOOM! You now have a highly 
 {% asset_img wp-page.png %}
 
 If you don't want to keep this running, don't forget to tear it down with:
-```
-terraform destroy
-```
+```terraform destroy```
 
 # Conclusion
 As with all projects, there's always room for improvement. Like I said in Part 1, this was my first automation project using Terraform. I've already found some ways to make it better but I'm always open to suggestions. I think this is a pretty good starting point.
