@@ -9,3 +9,5 @@ categories:
   - - CI/CD
 date: 2018-08-06 18:45:24
 ---
+
+When I attended my first AWS Re:Invent confere
