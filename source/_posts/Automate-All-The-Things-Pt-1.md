@@ -11,7 +11,7 @@ categories:
 date: 2018-08-03 08:28:03
 ---
 
-#Intro
+# Intro
 When I began learning AWS, I started creating resources in the console. Clicking and deploying pretty much everything. I would terminate everything at the end of the day so the resources wouldn't keep accumulating costs. But the next day, I would have issues trying to recreate what I was doing because I would miss a step. This was very frustrating but it led me to automating with Infrastructure as Code (IaC).
 
 IaC is a process of managing and provisioning resources defined in template or script. Rather than manually clicking through the console, I could automate the deployment of resources from a pre-defined template. Best of all, with a single command or click, I could terminate all the resources deployed through the template as well as reuse it and start from where I left off. This was a game changer in my eyes and I started to learn various tools that offered IaC. 

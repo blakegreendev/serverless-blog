@@ -10,7 +10,7 @@ date: 2018-08-01 08:49:48
 
 {% asset_img certs.png %}
 
-#Intro
+# Intro
 Certifications are important in the IT world. They are validation that you've put in the time to learn new skills. I want to share my certification experiences and what I did to achieve them. 
 
 I was a complete "newb" to cloud computing and didn't have any experience. The company was moving toward the cloud and I knew I had to jump on board or get left behind. That was motivation in itself and I quickly sought out any training I could get my hands on. I remember sitting through the Cloud Guru course where the instructor spun up a Wordpress site in the Austrailia region. I thought that was the coolest thing in the world and I tried it myself. I was obsessed from that point on and continued to learn what all the other services did. 
