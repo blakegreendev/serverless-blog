@@ -5,10 +5,10 @@
 # Header Menu
 menu:
   homepage: /
+  projects: archives
   Twitter: https://twitter.com/TSgt_Green
   Github: https://github.com/bgreengo
   LinkedIn: https://www.linkedin.com/in/blakegreen2/
-  projects: archives
   aboutme: about
 
 

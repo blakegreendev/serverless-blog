@@ -15,8 +15,10 @@ This scenario has a running EC2 instance running in US-West-2 while a preconfigu
 ## DR Diagram
 ![AWS DR](https://user-images.githubusercontent.com/23042063/42403841-0408b49a-8139-11e8-8434-c13dac0b633f.png)
 
+<!--
 ## DR Video Demo
 {% youtube tXNWMlKe1Do %}
+-->
 
 ## Sequence of events in this scenario:
 1. Stopped instance in US-West-2 to initiate failover

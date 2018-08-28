@@ -5,7 +5,7 @@ tags:
 categories:
   - - AWS
   - - CI/CD
-  - - Projects
+  - - Automation
 date: 2018-08-06 13:57:38
 ---
 
