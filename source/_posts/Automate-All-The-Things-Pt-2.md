@@ -4,9 +4,8 @@ tags:
   - aws
 categories:
   - - AWS
-  - - Serverless
-  - - Containers
   - - CI/CD
+  - - Projects
 date: 2018-08-06 13:57:38
 ---
 

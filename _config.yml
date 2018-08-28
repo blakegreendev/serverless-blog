@@ -4,10 +4,10 @@
 
 # Site
 title: Blake Green
-subtitle: Blake Green
+subtitle: 
 description: Cloud Solutions Architect
 keywords: aws,cloud,serverless,automation
-author: Blake Green
+author: 
 language: en
 timezone: America/Los_Angeles
 
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hipaper
+theme: hiker
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

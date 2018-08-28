@@ -1,9 +1,9 @@
 ---
-title: about
+title: About
 date: 2018-07-27 13:39:12
 ---
 
-Hi! I'm Blake Green. I've created this site to post about new technology and things I've learned throughout my career.
+Never the master, always the student. This blog is focused on learning new technology in the cloud space, specifically with AWS. It's an entirely serverless blog (which will probably be a blog post topic) and my plan is to cover areas like serverless, containers, CI/CD, infrastructure as code, and configuration management. Each of the categories are very different but serve an important purpose in the IT world.
 
 My journey started when I signed up for the US Air Force when I was 18 years old. I thought the Air Force was going to be a 20 year career. Life isn't what you expect sometimes and I was thrusted back in the civilian wilderness after 6 successful years of active duty. Luckily, I've been able to continue my service as an Air Force Reservist and serve one weekend a month. 
 

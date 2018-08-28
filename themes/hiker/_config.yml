@@ -1,0 +1,128 @@
+# ---------------------------------------------------------------
+# Site Information Settings
+# ---------------------------------------------------------------
+
+# Header Menu
+menu:
+  homepage: /
+  Twitter: https://twitter.com/TSgt_Green
+  Github: https://github.com/bgreengo
+  LinkedIn: https://www.linkedin.com/in/blakegreen2/
+  projects: archives
+  aboutme: about
+
+
+since: 2018
+
+# Set default keywords (Use a comma to separate)
+keywords: "aws,cloud"
+
+# Put your favicon.ico or avatar.jpg into `hexo-site/themes/hiker/source/` directory.
+avatar: 
+  enable: true
+  border: true
+  width: 124
+  height: 124
+  top: 0
+  url: css/images/mylogo.jpg
+
+
+# Homepage
+# eg. home_background_image: [css/images/home-bg.jpg, http://t.cn/RMbvEza]
+# eg. mode: image | polyline | trianglify
+home_background_image:
+  enable: true
+  mode: image
+  rolling: true
+  url: [css/images/bnw3.jpg]
+
+home_logo_image:
+  enable: false
+  border: false
+  url: css/images/homelogo.jpg
+
+
+# AboutPage background
+about_big_image: [css/images/cloudguy.jpg]
+
+
+# Archive pagination
+archive_pagination: true
+
+
+# Post Article's Content
+post_catalog:
+  enable: true
+post_excerpt: true
+
+
+# Content
+fancybox: true
+
+
+# Sidebar
+sidebar: right
+widgets:
+- social
+- category
+- tag
+- tagcloud
+- archive
+- recent_posts
+
+
+# Social Links
+# Key is the name of FontAwsome icon.
+# Value is the target link (E.g. GitHub: https://github.com/iTimeTraveler)
+social:
+  Twitter: https://twitter.com/TSgt_Green
+  Github: https://github.com/bgreengo
+  LinkedIn: https://www.linkedin.com/in/blakegreen2/
+  File: https://s3-us-west-2.amazonaws.com/bgreen-resume/Blake_Green_Resume-v9.pdf
+  email: greengocloud@gmail.com
+
+
+
+# Search
+search:
+    insight: true # you need to install `hexo-generator-json-content` before using Insight Search
+
+
+
+
+# comment ShortName, you can choose only ONE to display.
+disqus_shortname: greengocloud
+comments: true
+
+
+
+# Code Highlight theme
+# Available value:
+#    default | gray | normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: default
+
+
+# Article theme color
+# Available value:
+#    random | orange | blue | red | green | black
+theme_color: black
+
+
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+# - category
+# - tagcloud
+# - archive
+
+
+# widget behavior
+archive_type: 'monthly'
+show_count: true
+
+# Miscellaneous
+google_analytics: UA-124724274-1
+    
+# post copyright
+copyright:
+    enable: false
