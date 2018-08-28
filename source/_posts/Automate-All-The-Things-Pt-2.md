@@ -23,14 +23,12 @@ But first, make sure you have [Terraform](https://www.terraform.io/) and [AWS CL
 
 Next, configure your AWS profile and make sure your IAM user has the appropriate permissions to deploy the resources. Additionally, you can log into the AWS console and generate HTTPS Git credentials for AWS CodeCommit with existing IAM user account or generate with IAM user created from Terraform. Hang on to these credentials for when we push the Wordpress files to Codecommit.
 
-Clone the [Github](https://github.com/bgreengo/wordpress-aws-terraform-automation) repo.
-
 # Deploy
-Ready for lauch, in the terminal:
-- cd wordpress-aws-terrform-automation
-- Generate a keypair called 'wordpress' using ssh-keygen
+Ready for lauch, in the terminal type:
 
 ```
+git clone https://github.com/bgreengo/wordpress-aws-terraform-automation
+cd wordpress-aws-terraform-automation
 terraform init
 terraform plan  
 terraform apply
@@ -50,8 +48,8 @@ Pretty cool, right? Let's keep going!
 Now the underlying infrastructure is deployed, we need to connect to the AWS CodeCommit repository and push the Wordpress files. Here's a quick reference for connecting to [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-connect.html). Use the credentials generated earlier or generate from the wordpress IAM user. The wordpress files are included in the Github repo with the .ebextensions.
 
 1. Add the Wordpress files with .ebextensions to the AWS CodeCommit repository. 
-2. Update the mount-efs.config in .ebextensions with file system ID which should be in the outputs after terraform apply completes.
-3. Git push the Wordpress and .ebextensions to CodeCommit.
+2. Update the mount-efs.config in .ebextensions with EFS file system ID which should be in the outputs after terraform apply completes.
+3. Git push the Wordpress and .ebextensions to AWS CodeCommit.
 4. Watch the magic happen!
 
 Head over to the AWS console and take a look in AWS CodePipeline. You should see that CodePipeline picked up the changes to the AWS CodeCommit repository and it will eventually deploy to Elastic Beanstalk.
