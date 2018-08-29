@@ -94,10 +94,14 @@ On the Properties tab of the bucket, enable static website hosting and set the i
 {% asset_img s3.png %}
 
 ## Certificate Manager
-Next, make sure you're in the US-East-1 (N. Virginia) region and request an SSL/TLS certificate in the AWS Certificate Manager console. CloudFront doesn't see the certs in other regions and you need it when you create the distribution. This might take a few moments but I've found the DNS validation is rather quick. 
+Next, make sure you're in the US-East-1 (N. Virginia) region and request an SSL/TLS certificate in the AWS Certificate Manager console. CloudFront doesn't see the certs in other regions and you need it when you create the distribution. 
+
+I suggest issuing a cert for the top level domain as well as adding a wildcard to the cert for future use. For example, domain name would be greengotech.net and then add another name to the cert would be *.greengotech.net. The wild card will cover all subdomains including blog.greengotech.net. 
+
+If you choose DNS validation, it's rather quick but still might take a few minutes before you can move to CloudFront.
 
 ## CloudFront
-Once a certificate has been issued in Certificate Manager, head over to the CloudFront console. Click create distribution and select the Web option. Fill in the following options and keep the rest as default values:
+Once a certificate has been successfully issued in Certificate Manager, head over to the CloudFront console. Click create distribution and select the Web option. Fill in the following options and keep the rest as default values:
 
 1. **Origin Domain Name** - use the static website hosting endpoint for the S3 bucket (i.e. **blog.greengotech.net.s3-website-us-west-2.amazonaws.com**)
 2. **Viewer Protocol Policy** - change to **Redirect HTTP to HTTPS**
@@ -109,7 +113,7 @@ Once a certificate has been issued in Certificate Manager, head over to the Clou
 This will take some time as the distribution deploys so let's head over to CodeBuild in the meantime. 
 
 ## CodeBuild
-In create a new project and give the project a name. Fill in the following options and keep the rest as default values:
+**Create a new project** and give the project a name. Fill in the following options and keep the rest as default values:
 
 1. **Source provider** select **Github**
 2. **Repository** select **Use a repository in my account**
@@ -123,8 +127,9 @@ In create a new project and give the project a name. Fill in the following optio
 10. Click **Continue**
 
 ## Route 53
-By now, the CloudFront distribution should be complete and you can go to Route 53 to create an alias record.
+By now, the CloudFront distribution should be complete and you can go to the Route 53 console to create an alias record. Create a record and point the domain name or subdomain to the CloudFront domain name.
 
+Here's an example:
 {% asset_img r53.png %}
 
 # Slack
