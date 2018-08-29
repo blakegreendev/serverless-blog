@@ -1,5 +1,5 @@
 ---
-title: Learning Containers for Today and Learning Serverless for Tomorrow
+title: Should I Be Learning Containers for Today and Learning Serverless for Tomorrow?
 tags:
   - aws
 categories:
