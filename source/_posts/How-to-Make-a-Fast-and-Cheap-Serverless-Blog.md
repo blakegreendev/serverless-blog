@@ -1,5 +1,5 @@
 ---
-title: How to Make a Cheap, Fast, and Low Maintenance Serverless Blog
+title: How to Make a Cheap, Fast, and Low Maintenance Serverless Blog on AWS
 tags:
   - aws
 categories:
@@ -15,12 +15,12 @@ I started a tech blog because I read somewhere that it would help me become a be
 
 I began with the following criteria; the blog must be **cheap, fast, and low maintenance.** My goal was to be able to spill ideas or posts and push content efficiently in a CI/CD fashion. With my experience as a SysAdmin, I knew that self-hosting my blog on a server didn't meet the criteria. I was concerned about the time and effort to run and maintain a server. Other hosting options were a bit too expensive for how much time I'd be able to contribute to the blog.
 
-I turned my attention to **serverless**, which has become a craze in the IT world. While serverless means different things to different people, I found that it met my criteria. This serverless architecture is dirt cheap (less than $2/month), uses a global content delivery network with Amazon CloudFront, and there's no servers to maintain. Bingo!
+I turned my attention to **serverless**, which has become a craze in the IT world. While serverless means different things to different people, I found that it met my criteria. This particular serverless architecture pattern is dirt cheap (less than $2/month), uses a global content delivery network with Amazon CloudFront, and there's no servers to maintain. **Bingo!**
 
 # Design
-Now that I've explained **why** I selected a serverless architecture, I'll explain the **details** of this design.
+Now that I've explained **why** I selected a serverless architecture, I'll explain the **details** of this design pattern.
 
-Here is a diagram for the serverless architecture:
+Here is a diagram to illustrate the serverless architecture:
 {% asset_img serverless-blog.png %}
 
 I used a static site generator called **Hexo**, which allows me to do local development to the blog among other features. After the site looks acceptable, I push the site to a **Github** repository that has a webhook to **AWS CodeBuild**. When Codebuild detects changes to the repository, it compiles and generates the site and sends a **Slack** notification with the status of the build. If the build succeeds, the site files are synced to a webstie enable **AWS S3 bucket**. The S3 bucket is an origin for an **AWS CloudFront** distribution that redirects HTTP to HTTPS and has a free SSL/TLS certificate from **AWS Certificate Manager**. Thus making a secure site to clients connecting to the blog. 
@@ -66,13 +66,13 @@ I'm a big advocate for putting everything into a version control. There are a nu
 If you don't already have a Github account, create one and then create a public repository.  
 
 # AWS
-**NOTE:** This assumes you have a domain name in Route 53. I'll be using **greengotech.net** for this demo.
+- **NOTE:** This assumes you have a domain name in Route 53. I'll be using **greengotech.net** for this demo.
 
 ## S3
 Sign into the **AWS Management Console**, and head over to S3 console. 
 
 Create an S3 bucket (use domain name for bucket name - i.e. blog.greengotech.net) and use the following bucket policy:
-{% codeblock [lang:json] %}
+{% codeblock %}
 {
   "Id": "Policy1522074684919",
   "Version": "2012-10-17",
@@ -97,13 +97,13 @@ On the Properties tab of the bucket, enable static website hosting and set the i
 Next, make sure you're in the US-East-1 (N. Virginia) region and request an SSL/TLS certificate in the AWS Certificate Manager console. CloudFront doesn't see the certs in other regions and you need it when you create the distribution. This might take a few moments but I've found the DNS validation is rather quick. 
 
 ## CloudFront
-Now, head over to the CloudFront console. Click create distribution and select Web. Fill in the following options and keep the rest as default values:
+Once a certificate has been issued in Certificate Manager, head over to the CloudFront console. Click create distribution and select the Web option. Fill in the following options and keep the rest as default values:
 
-1. **Origin Domain Name** type: blog.greengotech.net.s3-website-us-west-2.amazonaws.com 
-2. **Viewer Protocol Policy** change to **Redirect HTTP to HTTPS**
-3. **Object Caching** change to **Customize** and set the **Default TTL** to **60**
-4. **Alternate Domain Names (CNAMEs)** add **blog.greengotech.net** (or whatever your domain name)
-5. **SSL Certificate** change to **Custom SSL Certificate** and select the cert from the previous step.
+1. **Origin Domain Name** - use the static website hosting endpoint for the S3 bucket (i.e. **blog.greengotech.net.s3-website-us-west-2.amazonaws.com**)
+2. **Viewer Protocol Policy** - change to **Redirect HTTP to HTTPS**
+3. **Object Caching** - change to **Customize** and set the **Default TTL** to **600**
+4. **Alternate Domain Names (CNAMEs)** - add the domain name of the site (i.e. **blog.greengotech.net**)
+5. **SSL Certificate** - change to **Custom SSL Certificate** and select the cert from the previous step.
 6. Click **Create Distribution**
 
 This will take some time as the distribution deploys so let's head over to CodeBuild in the meantime. 
@@ -128,7 +128,9 @@ By now, the CloudFront distribution should be complete and you can go to Route 5
 {% asset_img r53.png %}
 
 # Slack
-I wanted to make sure the builds were successful without logging into the AWS console, so I researched **AWS** and **Slack** integrations. I found a very helpful tutorial [HERE](https://github.com/bgreengo/aws-to-slack). After you create the Slack webhook, you can launch the CloudFormation template and fill in the parameters with the Slack webhook information. After that, create a CloudWatch event and select CodeBuild as the source and the new Slack Lambda function as the target and every time a build is triggered, you'll be notified in your Slack channel. 
+I wanted to make sure the builds were successful without logging into the AWS console, so I researched **AWS** and **Slack** integrations. I found a very helpful tutorial [HERE](https://github.com/bgreengo/aws-to-slack). 
+
+After you create the Slack webhook, you launch the CloudFormation template and fill in the parameters with the Slack webhook information. After that, create a CloudWatch event and select CodeBuild as the source and the new Slack Lambda function as the target and every time a build is triggered, you'll be notified in your Slack channel. 
 
 Here's what the CloudWatch event looks like:
 {% asset_img cb.png %}
@@ -141,7 +143,7 @@ Finally, the last step! The **buildspec.yml** file is required for CodeBuild to 
 
 Create a **buildspec.yml** file in the **blog** directory and enter the following:
 - Make sure you update the S3 bucket with your bucket name.
-{% codeblock [lang:yaml] %}
+{% codeblock %}
 version: 0.2
 
 phases:
@@ -166,10 +168,12 @@ Last but not least, commit and push the files to **Github** and let the CI/CD ro
 If all goes well, you should see something like this:
 {% asset_img web.png %}
 
-You can continue to customize it and create new posts just type:
+You can continue to customize the blog in the **_config.yml** file and edit the layout.
+
+To create new posts just type:
 ```
 hexo new **BLOG TITLE**
 ```
 
 # Conclusion
-It was a bit of a journey to get here but from now on you're a **git push** away from updating your blog content. Now you can focus on writing valuable posts rather than worrying about maintaining the underlying infrastructure. Not to mention, it's almost at no cost thanks to AWS free tier. So far I've been very pleased with the cost, performance, and lack of adminstrative burden. I must give a shout out to [Mohamed Labouardy](https://hackernoon.com/build-a-serverless-production-ready-blog-b1583c0a5ac2) for the inspiration.
+It was a bit of a journey to get here but you're only a **git push** away from updating your blog content. Now you can focus on writing valuable posts rather than worrying about maintaining the underlying infrastructure. So far I've been very pleased with the low cost, high performance, and lack of adminstrative burden of my serverless blog on AWS. I must give a shout out to [Mohamed Labouardy](https://hackernoon.com/build-a-serverless-production-ready-blog-b1583c0a5ac2) for the inspiration.
