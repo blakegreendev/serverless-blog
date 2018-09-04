@@ -11,19 +11,20 @@ date: 2018-08-28 12:09:18
 
 
 # Intro
-I started a tech blog because I read somewhere that it would help me become a better writer and someday I might end up Googling something to find out that I've already written a blog about it. The jury is still out.
+I started a *tech blog* because I read somewhere that it would help me become a better writer and someday I might end up Googling something to find out that I've already written a blog about it. The jury is still out.
 
-I began with the following criteria; the blog must be **cheap, fast, and low maintenance.** My goal was to be able to spill ideas or posts and push content efficiently in an automated fashion. With my experience as a SysAdmin, I knew that self-hosting my blog on a server didn't meet the criteria. I was concerned about the time and effort to run and maintain a server and other hosting options were a bit too expensive.
+I began with the following criteria; the blog must be **cheap, fast, and low maintenance.** Security and availability were also on my mind but ultimately, my goal was to be able to spill ideas onto a post and push content efficiently in an automated fashion. With my experience as a SysAdmin, I knew that self-hosting my blog on a server with a CMS like Wordpress or Drupal didn't meet the criteria. I was concerned about the time and effort to run and maintain a server and other hosting options were a bit too expensive.
 
 I turned my attention to **serverless**, which has become a craze in the IT world. While serverless means different things to different people, I found that it met my criteria. This particular serverless architecture pattern is dirt cheap (less than $2/month), uses a global content delivery network with Amazon CloudFront, and there's no servers to maintain. **Bingo!**
 
-# Design
+# Overview
 Now that I've explained **why** I selected a serverless architecture, I'll explain the **details** of this design pattern.
 
-Here is a diagram to illustrate the serverless architecture:
-{% asset_img serverless-blog.png %}
+## Design
+I used a static site generator called **Hexo**, which allows me to do local development to the blog among other features. After the site looks acceptable, I push the site to a **Github** repository that has a webhook to **AWS CodeBuild**. When Codebuild detects changes to the repository, it compiles and generates the site and sends a **Slack** notification with the status of the build. If the build succeeds, the site files are synced to a webstie enable **AWS S3 bucket**. The S3 bucket is an origin for an **AWS CloudFront** distribution that redirects HTTP to HTTPS and has a free SSL/TLS certificate from **AWS Certificate Manager**. Thus making a secure site to clients connecting to the blog.
 
-I used a static site generator called **Hexo**, which allows me to do local development to the blog among other features. After the site looks acceptable, I push the site to a **Github** repository that has a webhook to **AWS CodeBuild**. When Codebuild detects changes to the repository, it compiles and generates the site and sends a **Slack** notification with the status of the build. If the build succeeds, the site files are synced to a webstie enable **AWS S3 bucket**. The S3 bucket is an origin for an **AWS CloudFront** distribution that redirects HTTP to HTTPS and has a free SSL/TLS certificate from **AWS Certificate Manager**. Thus making a secure site to clients connecting to the blog. 
+## Diagram
+{% asset_img serverless-blog.png %} 
 
 # Hexo
 [Hexo](https://hexo.io/) is a fast, simple and powerful blog framework. It uses **Markdown** for the blog posts which I was familiar with from writing Github readme's. To install the **Hexo CLI**, it requires **npm** and **git** as a prerequisite. Once that's complete, type:
