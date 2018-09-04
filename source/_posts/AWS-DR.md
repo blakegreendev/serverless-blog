@@ -9,9 +9,10 @@ date: 2018-08-02 13:30:50
 ---
 
 # Intro
-The term pilot light is often used to describe a DR scenario in which a minimal version of an environment is always running in the cloud. The idea of the pilot light is an analogy that comes from the gas heater. In a gas heater, a small flame that’s always on can quickly ignite the entire furnace to heat up a house.
+The term **pilot light** is often used to describe a **disaster recovery** scenario in which a minimal version of an environment is always running in the cloud. The idea of the pilot light is an analogy that comes from the gas heater. In a gas heater, a small flame that’s always on can quickly ignite the entire furnace to heat up a house.
 
-In this scenario, an EC2 instance is running in US-West-2, while a preconfigured AMI is stopped in US-East-1. In the event of a failure, which in this case is initated by stopping the running US-West-2 instance, the instance in US-East-1 is automatically started via a Lambda function and Route 53 redirects traffic to the failover instance. 
+# Overview
+In this scenario, an EC2 instance is running in US-West-2, while a preconfigured AMI is stopped in US-East-1. In the event of a failure, *which in this case is initated by stopping the running US-West-2 instance,* the instance in US-East-1 is automatically started via a Lambda function and Route 53 redirects traffic to the failover instance. 
 
 This scenario is particularly useful when there is an outage at 3am in the morning and you don't need to respond because failover is already automated. 
 
