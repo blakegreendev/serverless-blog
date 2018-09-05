@@ -37,9 +37,9 @@ aws cloudformation deploy --template-file DR-East/1-sg-east.yaml --stack-name pl
 
 ### Step 2: EIP
 **For parameter values in Step 2:**
-- **Subnet ID:** *aws ec2 describe-subnets --region us-east-1*
+- **Subnet ID:** 
   - Example Output: **subnet-df1937e2**
-- **Security Group ID:** *aws cloudformation describe-stacks --stack-name pl-sg-east --region us-east-1*
+- **Security Group ID:** 
   - Example Output: **sg-0fbcc6a0a4d1f4a72**
 
 **Update parameter values and run:**
@@ -49,12 +49,12 @@ aws cloudformation deploy --template-file DR-East/2-eip-east.yaml --stack-name p
 
 ### Step 3: EC2
 **For parameter values in Step 3:**
-- **ENI ID:** *aws cloudformation describe-stacks --stack-name pl-eip-east --region us-east-1*
+- **ENI ID:** 
   - Example Output:
 
 **Update parameter values and run:**
 ```
-aws cloudformation deploy --template-file DR-East/3-ec2-east.yaml --stack-name pl-ec2-east --parameter-overrides NetworkInterface=<ENTER ENI ID>
+aws cloudformation deploy --template-file DR-East/3-ec2-east.yaml --stack-name pl-ec2-east --parameter-overrides NetworkInterface=<ENTER ENI ID> --region us-east-1
 ```
 
 ### Step 4: S3
@@ -64,7 +64,7 @@ aws cloudformation deploy --template-file DR-East/4-s3-east.yaml --stack-name pl
 
 ### Step 5: Lambda
 - Update **start-instance.py** with instance ID from Step 3.
-  - **Instance ID:** *aws cloudformation describe-stacks --stack-name pl-ec2-east --region us-east-1*
+  - **Instance ID:** 
 - Zip python script and upload to S3 bucket created in Step 4.
   - **Zip:** *zip start-instance.py start-instance.py.zip*
   - **Upload to S3:** *aws s3 cp start-instance.py.zip s3://BUCKETNAME-HERE*
@@ -76,7 +76,7 @@ aws cloudformation deploy --template-file DR-East/4-s3-east.yaml --stack-name pl
 
 **Update parameter values and run:**
 ```
-aws cloudformation deploy --template-file DR-East/4-lambda-east.yaml --stack-name pl-lambda-east --parameter-overrides Email=<ENTER EMAIL> S3Bucket=<ENTER S3 Bucket Name> ZipFile=<ENTER Name of Zip File>
+aws cloudformation deploy --template-file DR-East/5-lambda-east.yaml --stack-name pl-lambda-east --parameter-overrides Email=<ENTER EMAIL> S3Bucket=<ENTER S3 Bucket Name> ZipFile=<ENTER Name of Zip File> --capabilities CAPABILITY_IAM --region us-east-1
 ```
 
 - **Note:** After stack creation is complete, confirm SNS subscription via email at the address provided in the parameter.
@@ -91,7 +91,7 @@ aws cloudformation deploy --template-file DR-West/1-sg-west.yaml --stack-name pl
 **For parameter values in Step 2:**
 - **Subnet ID:** *aws ec2 describe-subnets*
   - Example Output: **subnet-df1937e2**
-- **Security Group ID:** *aws cloudformation describe-stacks --stack-name pl-sg-west*
+- **Security Group ID:** *aws cloudformation describe-stacks*
   - Example Output: **sg-0fbcc6a0a4d1f4a72**
 
 **Update parameter values and run:**
@@ -101,7 +101,7 @@ aws cloudformation deploy --template-file DR-West/2-eip-west.yaml --stack-name p
 
 ### Step 3: EC2
 **For parameter values in Step 3:**
-- **ENI ID:** *aws cloudformation describe-stacks --stack-name pl-eip-west*
+- **ENI ID:** *aws cloudformation describe-stacks*
   - Example Output:
 
 **Update parameter values and run:**
@@ -111,15 +111,14 @@ aws cloudformation deploy --template-file DR-West/3-ec2-west.yaml --stack-name p
 
 ### Step 4: Route 53
 **For parameter values in Step 4:**
-- **Primary Record:** *aws cloudformation describe-stacks --stack-name pl-ec2-west*
+- **Primary Record:** *aws cloudformation describe-stacks*
   - Example Output: 34.244.21.56
-- **Secondary Record:** *aws cloudformation describe-stacks --stack-name pl-ec2-east --region us-east-1*
+- **Secondary Record:** 
   - Example Output: 34.245.22.57
 - **Domain Name:** Example - aws.greengotech.net
-- **Hosted Zone ID:** *aws cloudformation describe-stacks --stack-name pl-eip-west*
-  - Example Output:
-- **SNS ARN:** *aws cloudformation describe-stacks --stack-name pl-eip-west*
-  - Example Output:
+- **Hosted Zone ID:** Example - 
+
+
 
 **Update parameter values and run:**
 ```
