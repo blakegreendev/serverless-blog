@@ -29,18 +29,17 @@ git clone https://github.com/bgreengo/aws-dr
 
 - Note: This assumes that you have the AWS CLI set up and US-WEST-2 is set as the default region.
 
-## US-EAST-1
+## US-EAST-1 - Create Stacks
 ### Step 1: Security Group
 ```
 aws cloudformation deploy --template-file DR-East/1-sg-east.yaml --stack-name pl-sg-east --region us-east-1
 ```
+**Output:** SecurityGroupId
 
 ### Step 2: EIP
 **For parameter values in Step 2:**
-- **Subnet ID:** 
-  - Example Output: **subnet-df1937e2**
-- **Security Group ID:** 
-  - Example Output: **sg-0fbcc6a0a4d1f4a72**
+- **Subnet ID:** Get ID from AWS console.
+- **Security Group ID:** Output from Step 1.
 
 **Update parameter values and run:**
 ```
@@ -49,8 +48,7 @@ aws cloudformation deploy --template-file DR-East/2-eip-east.yaml --stack-name p
 
 ### Step 3: EC2
 **For parameter values in Step 3:**
-- **ENI ID:** 
-  - Example Output:
+- **ENI ID:** Output from Step 2.
 
 **Update parameter values and run:**
 ```
@@ -64,7 +62,7 @@ aws cloudformation deploy --template-file DR-East/4-s3-east.yaml --stack-name pl
 
 ### Step 5: Lambda
 - Update **start-instance.py** with instance ID from Step 3.
-  - **Instance ID:** 
+  - **Instance ID:** Get from AWS console.
 - Zip python script and upload to S3 bucket created in Step 4.
   - **Zip:** *zip start-instance.py start-instance.py.zip*
   - **Upload to S3:** *aws s3 cp start-instance.py.zip s3://BUCKETNAME-HERE*
@@ -81,7 +79,8 @@ aws cloudformation deploy --template-file DR-East/5-lambda-east.yaml --stack-nam
 
 - **Note:** After stack creation is complete, confirm SNS subscription via email at the address provided in the parameter.
 
-## US-WEST-2 
+## US-WEST-2 - Create Stacks
+
 ### Step 1: Security Group
 ```
 aws cloudformation deploy --template-file DR-West/1-sg-west.yaml --stack-name pl-sg-west
@@ -89,10 +88,8 @@ aws cloudformation deploy --template-file DR-West/1-sg-west.yaml --stack-name pl
 
 ### Step 2: EIP
 **For parameter values in Step 2:**
-- **Subnet ID:** *aws ec2 describe-subnets*
-  - Example Output: **subnet-df1937e2**
-- **Security Group ID:** *aws cloudformation describe-stacks*
-  - Example Output: **sg-0fbcc6a0a4d1f4a72**
+- **Subnet ID:** *aws ec2 describe-subnets* - get subnet ID.
+- **Security Group ID:** Output from Step 1.
 
 **Update parameter values and run:**
 ```
@@ -101,8 +98,7 @@ aws cloudformation deploy --template-file DR-West/2-eip-west.yaml --stack-name p
 
 ### Step 3: EC2
 **For parameter values in Step 3:**
-- **ENI ID:** *aws cloudformation describe-stacks*
-  - Example Output:
+- **ENI ID:** Output from Step 2.
 
 **Update parameter values and run:**
 ```
@@ -111,21 +107,17 @@ aws cloudformation deploy --template-file DR-West/3-ec2-west.yaml --stack-name p
 
 ### Step 4: Route 53
 **For parameter values in Step 4:**
-- **Primary Record:** *aws cloudformation describe-stacks*
-  - Example Output: 34.244.21.56
-- **Secondary Record:** 
-  - Example Output: 34.245.22.57
+- **Primary Record:** Output from US-West-2 - Step 3.
+- **Secondary Record:** Output from US-East-1 - Step 3.
 - **Domain Name:** Example - aws.greengotech.net
-- **Hosted Zone ID:** Example - 
-
-
+- **Hosted Zone ID:** Example - HZQ1234847
 
 **Update parameter values and run:**
 ```
 aws cloudformation deploy --template-file DR-West/4-route53.yaml --stack-name pl-r53-west --parameter-overrides PrimaryRecord=<US-WEST-2 EIP> SecondaryRecord=<US-EAST-1 EIP> DomainName=<Domain Name> HostedZoneId=<ID in R53> AlarmSNSTopicArn=<SNS ARN> 
 ```
 
-# Failover
+# Failover 
 Get the US-West-2 instance ID and initiate the failover by stopping the instance:
 ```
 aws ec2 describe-instances
