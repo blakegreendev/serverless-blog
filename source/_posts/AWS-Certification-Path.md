@@ -11,15 +11,25 @@ date: 2018-09-08 08:49:48
 {% asset_img allcerts.png %}
 
 # Intro
-I completed my [5th AWS certification!](https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=YQ40S242KN141DS9) While certifications are no substitute for experience, these certifications have changed my career. I've been able to gain experience through obtaining AWS certifications and continued to grow as a professional. I believe that passing these AWS certifications has provided me with credibility and validation of the skills I've gained through learning new services and applying them to cloud solutions. 
+I completed my [5th AWS certification!](https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=YQ40S242KN141DS9) While certifications are no substitute for experience, these certifications have changed my career. I've been able to gain experience through obtaining AWS certifications and continued to grow as a professional. I'm also very lucky to have an employer encourage personal growth and allow me to pursue and achieve my goals. Passing these AWS certifications has provided me with credibility and validation of the skills I've gained through learning new services and applying them to cloud solutions. 
+
+Here is a diagram of the Certification Roadmap:
+{% asset_img aws-track.png %}
+
+I took a different certification path but in my opinion, here is a list of AWS certifications from least to most difficult:
+- AWS Certified Developer – Associate
+- AWS Certified Solutions Architect – Associate
+- AWS Certified SysOps Administrator – Associate
+- AWS Certified Solutions Architect – Professional
+- AWS Certified DevOps Engineer – Professional
 
 # Exam Prep
-For each certification, I used the same strategy. I watched each certification specific course from A Cloud Guru and Linux Academy. After completing the courses, I reviewed Jayendra's blog for notes and then watched re:Invent videos. Some people have created YouTube playlists for specific exams which is very helpful.
-- [A Cloud Guru](https://acloud.guru/) 
-- [Linux Academy](https://linuxacademy.com/) 
-- [Jayendra's Blog](http://jayendrapatil.com/) 
-- re:Invent sessions on YouTube 
-- Read whitepapers and forums
+- Take a look at the exam blueprint and understand the requirements. The also provide direct links to useful whitepapers. For example, here's the [AWS Certified Solutions Architect – Associate Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_Certified_Solutions_Architect_Associate_Feb_2018_%20Exam_Guide_v1.5.2.pdf)
+- [A Cloud Guru](https://acloud.guru/) - For the best exam specific content, A Cloud Guru is simple the best. I usually start each exam preparation by going through the entire course on A Cloud Guru. I also recommend the Discussion boards as you can learn from other people's exam experience.
+- [Linux Academy](https://linuxacademy.com/) - I've found that Linux Academy provides the best "in-depth" content. I think they do a great job of not only teaching you what you need to know to pass the exam, but also diving deeper into concepts that ultimately will make you a better Cloud Architect or whatever you may be interested in. 
+- [Jayendra's Blog](http://jayendrapatil.com/) - This blog contains great notes and breaks down each topic on the exam. People contribute to this blog in the comments of each page and Jayendra does an excellent job of updating the content.
+- re:Invent sessions on YouTube - AWS graciously posts re:Invent sessions every year which are extremely valuable. There are each about an hour long and some people have created playlists for specific certifications. For example, this [YouTube Playlist](https://www.youtube.com/watch?v=KZoTh3hZTyo&list=PL_RVC-cMNyYTz8zlxq117O1bfji-knooI&index=1) helped me on the AWS Certified Solutions Architect – Professional exam.
+- Read AWS whitepapers and forums - This can be difficult because the AWS whitepapers aren't the most exciting literature but I promise, it's worth it and you'll be a better Cloud Architect because you've read these.
 
 #  AWS Certified Solutions Architect - Associate
 
