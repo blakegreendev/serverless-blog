@@ -48,7 +48,7 @@ Key Areas:
 
 {% asset_img sysops-req.png %}
 
-With my SysAdmin backgroud, I thought this certification was my next logical choice. I made it a goal to complete before the 2017 re:Invent conference. I had over a year under my belt since my last certification and it made a huge difference. I was familiar with the AWS platform by this time and working in the AWS console daily. 
+With my SysAdmin backgroud, I thought this certification was my next logical choice. I made it a goal to complete before the 2017 re:Invent conference. I had over a year under my belt since my last certification and it made a huge difference. I was familiar with the AWS platform by this time and working with AWS services daily. 
 
 Key Areas:
 - Elastic Load Balancer
@@ -59,7 +59,7 @@ Key Areas:
 
 {% asset_img dev-req.png %}
 
-I took the exam before they updated it in 2018. Prior to sitting the exam, I assumed the exam was more focused on the developer services  which turned out not to be the case. By this time, I was extremely confident in my AWS skills and it showed on this particular exam. There wasn't very much depth to the questions and with my knowledge of the services, it was extremely simple to pinpoint the answer (probably the reason they updated the exam).
+I took the exam before AWS updated it in 2018. Prior to sitting the exam, I assumed it would be focused on the developer services which wasn't the case. By this time, I was extremely confident in my AWS skills and it showed on this particular exam. There wasn't any depth to the questions and with my knowledge of the services, it was extremely simple to pinpoint the answer (probably the reason they updated the exam).
 
 Key areas:
 - DynamoDB
@@ -71,7 +71,7 @@ Key areas:
 
 {% asset_img sa-pro-req.png %}
 
-My **Solutions Architect - Associate** was going to expire. Instead of retaking SA-A, I used the 50% off voucher that AWS provides and went for the **Solutions Architect - Professional**. This was by far the toughest exam I've ever taken at the time but also a big accomplishment for me. I was very proud to earn this certification, level up into the "Professional" ranks, and recertify my **Solutions Architect - Associate** certification. The accumulation of all three associate level certification definitely helped since this exam covers such a wide variety of AWS services. Not only were the questions long and difficult, my testing terminal froze halfway through my exam. Luckily, they testing folks were able to refresh it and I didn't have to start over but the added stress didn't help. The exam is truly a race against time. 
+My **Solutions Architect - Associate** was going to expire. Instead of retaking SA-A, I used the 50% off voucher that AWS provides and went for the **Solutions Architect - Professional**. This exam was a challenge but my preparation prevailed. I was very proud to earn this certification, level up into the "Professional" ranks, and recertify my **Solutions Architect - Associate** certification. The accumulation of all three associate level certification definitely helped since this exam covers such a wide variety of AWS services. Not only were the questions long and difficult, my testing terminal froze halfway through my exam. Luckily, they testing folks were able to refresh it and I didn't have to start over but the added stress didn't help. The exam is truly a race against time and requires you to stay focused.
 
 Key areas:
 - Hybrid Architectures (on-premises and cloud)
