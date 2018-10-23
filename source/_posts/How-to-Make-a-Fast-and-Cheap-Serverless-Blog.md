@@ -10,7 +10,7 @@ date: 2018-08-28 12:09:18
 ---
 
 
-# Intro
+
 I started a *tech blog* because I read somewhere that it would help me become a better writer and someday I might end up Googling something to find out that I've already written a blog about it. The jury is still out.
 
 I began with the following criteria; the blog must be **cheap, fast, and low maintenance.** Security and availability were also on my mind but ultimately, my goal was to be able to spill ideas onto a post and push content efficiently in an automated fashion. With my experience as a SysAdmin, I knew that self-hosting my blog on a server with a CMS like Wordpress or Drupal didn't meet the criteria. I was concerned about the time and effort to run and maintain a server and other hosting options were a bit too expensive.

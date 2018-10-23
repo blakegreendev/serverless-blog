@@ -8,7 +8,7 @@ date: 2018-09-10 13:12:30
 ---
 
 
-I've all but accepted the fact that I'm going to spend the rest of my life **learning**. I've come to terms with myself that if I want to be successful, I must be incapable of being content. There is such a massive amount of information at our fingertips, it can be overwhelming to find useful and applicable material to help you learn. I've assembled a list of folks that have made me a more valuable professional because I follow them. 
+I've all but accepted the fact that I'm going to spend the rest of my life **learning**. I've come to terms with myself that if I want to be successful, I must be incapable of being content. There is such a massive amount of information at our fingertips, it can be overwhelming to find useful and applicable material to help you learn. I've assembled a list of folks that have made me a more valuable professional because I follow them. *NOTE:* There is a ton of other people that I've missed and should be on this list but when you start to follow these leaders, you'll see the other turn up. 
 
 {% blockquote %}
 To be a great leader, you must first learn to follow.
@@ -18,7 +18,7 @@ To be a great leader, you must first learn to follow.
 - [Twitter](https://twitter.com/) - I was late to the Twitter game but I quickly found out that there is a ton of exceptional information that floats around the Twittersphere. I highly recommend creating a Twitter account and start by following some smart people below.
 - [Medium](https://medium.com/) - When folks can't fit their thoughts in a few Tweets, Medium provides a place to post detailed blogs. If you sign up for an account, you'll be able to bookmark and comment on interesting posts. I've found some handy how-to's on Medium and a lot of leaders use it so they don't have the hassle of running their own blog. I think it's also easier to reach a larger audience.
 - [DEV](https://dev.to/) - Similar to Medium where you post a blog article, DEV is more focused on developer discussions. Create an account and add tags to follow such as #aws.
-- [Reddit](https://www.reddit.com/r/aws/) - I've seen a lot of 
+- [Reddit](https://www.reddit.com/r/aws/) - I've seen a lot of great stuff here. Especially from folks that are in the weeds with AWS services on a daily basis. It gives you a chance to view what other people are encountering and learn from what other people have to say or chime in yourself.  
 - **Newsletters** - A lot of thought leaders and companies are using newsletters to stay in touch with people. It's more of a direct communication so you don't have to go looking for information, it's sitting in your inbox!
 
 # Follow the Leaders

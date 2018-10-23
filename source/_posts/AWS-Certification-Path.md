@@ -10,7 +10,7 @@ date: 2018-09-08 08:49:48
 
 {% asset_img allcerts.png %}
 
-# Intro
+
 I completed my [5th AWS certification!](https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=YQ40S242KN141DS9) While certifications are no substitute for experience, these certifications have changed my career. I've been able to gain experience through obtaining AWS certifications and continued to grow as a professional. I'm also very lucky to have an employer encourage personal growth and allow me to pursue and achieve my goals. Passing these AWS certifications has provided me with credibility and validation of the skills I've gained through learning AWS services and applying them to cloud solutions. 
 
 My advice to anyone starting the AWS certification journey; set **goals**, stay **focused**, and **achieve**. 

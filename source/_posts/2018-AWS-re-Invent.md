@@ -41,6 +41,7 @@ I'm so excited to attend my 3rd AWS re:Invent in a row! I'm very grateful for In
 - **DEV309-R  --  CI/CD for Serverless and Containerized Applications**
 
 ## Extra
+- **Serverless Happy Hour**
 - **Pub Crawl**
 
 # Wednesday

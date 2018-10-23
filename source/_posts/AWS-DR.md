@@ -8,7 +8,7 @@ categories:
 date: 2018-08-02 13:30:50
 ---
 
-# Intro
+
 The term **pilot light** is often used to describe a **disaster recovery** scenario in which a minimal version of an environment is always running in the cloud. The idea of the pilot light is an analogy that comes from the gas heater. In a gas heater, a small flame that’s always on can quickly ignite the entire furnace to heat up a house.
 
 # Overview

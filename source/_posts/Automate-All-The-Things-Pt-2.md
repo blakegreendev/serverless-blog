@@ -10,7 +10,7 @@ date: 2018-08-06 13:57:38
 ---
 
 
-# Intro
+
 The Terraform scripts are intended to automate the deployment of the underlying infrastructure for the project. This saves an enormous amount of time and gives a reusable baseline to expand on post deployment. After resources are running, we'll commit the Wordpress files to AWS Codecommit and let the automated AWS CodePipeline deploy to AWS Elastic Beanstalk. With some magic from ebextensions, we'll be able to abstract media files to AWS EFS and the database to AWS RDS. This creates an immutable infrastructure because the EC2 instances running the application are completely disposable. In other words, there is nothing stateful that exists on the instance itself and when a new instance is created, it picks up the configuration automatically with autoscaling.
 
 Here is what the architecture will look like:
