@@ -18,7 +18,7 @@ We have a running joke at Infiniti Consulting that we just tell our families tha
 Here's a couple of my favorite analogies:
 
 {% blockquote %}
-**Imagine you have a freezer full of steaks at home. The power goes out and all the steaks go bad. Instead of storing all of your steaks at home, you can have a company store them for you in a mucher bigger freezer with backup generators for a fee. Think of the steaks as your data and the freezer as the cloud.**
+**Imagine you have a freezer full of 20 steaks at home. The power goes out and all 20 steaks go bad. Instead of storing all of your steaks at home, you can have a company store all of your steaks and more in a mucher bigger freezer with a bunch of backup generators for a fee. Think of the steaks as your data and the freezer as the cloud.**
 {% endblockquote %}
 
 {% blockquote %}

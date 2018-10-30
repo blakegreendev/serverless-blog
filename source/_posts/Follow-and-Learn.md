@@ -8,7 +8,7 @@ date: 2018-09-10 13:12:30
 ---
 
 
-I've all but accepted the fact that I'm going to spend the rest of my life **learning**. I've come to terms with myself that if I want to be successful, I must be incapable of being content. There is such a massive amount of information at our fingertips, it can be overwhelming to find useful and applicable material to help you learn. I've assembled a list of folks that have made me a more valuable professional because I follow them. *NOTE:* There is a ton of other people that I've missed and should be on this list but when you start to follow these leaders, you'll see the other turn up. 
+I have accepted the fact that I'm going to spend the rest of my life **learning**. I've come to terms with myself that if I want to be successful, I must be incapable of being content. There is such a massive amount of information at our fingertips, it can be overwhelming to find useful and applicable material to help you learn. I've assembled a list of folks that have made me a more valuable professional because I follow them. *NOTE:* There is a ton of other people that I've missed and should be on this list but when you start to follow these leaders, you'll see the other turn up. 
 
 {% blockquote %}
 To be a great leader, you must first learn to follow.
