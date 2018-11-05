@@ -16,7 +16,7 @@ Tom is the founder of [ServerlessOps](https://www.serverlessops.io/) which provi
 
 # Green Go Reads
 
-**ALL ABOARD!** *Operations engineers are moving up the stack!* If you haven't already noticed Serverless, you might miss the train. While Serverless adoption is still growing and the train hasn't left the station, this ebook prepares the operations folks that change is on the horizon. Change doesn't have to be grim, but I believe this foreward thinking allows the pragmatic operations people to consider how the Serverless disruption will effect their career. Operations engineers that are open-minded to see the future of application development requires them to evolve and adapt to new technology will benefit from reading this ebook. I know I did.
+**ALL ABOARD!** *Operations engineers are moving up the stack!* If you haven't already noticed Serverless, you might miss the train. While Serverless adoption is still growing and the train hasn't left the station, this ebook prepares the operations folks that change is on the horizon. Change doesn't have to be grim, but I believe this foreward thinking allows the pragmatic operations people to consider how the Serverless movement will effect their career. Operations engineers that are open-minded to see the future of application development requires them to evolve and adapt to new technology will benefit from reading this ebook. I know I did.
 
 The ebook starts with setting baselines and uses the AWS definition for Serverless which I tend to agree with. Some people think Lambda is required to make an architecure serverless which is simply not true. I tried to point that out in a previous post about making this [Serverless blog](https://greengocloud.com/2018/08/28/How-to-Make-a-Fast-and-Cheap-Serverless-Blog/).
 
@@ -27,7 +27,7 @@ AWS describes **Serverless** with these four characteristics:
 - **Scales with usage**
 - **Availability and fault tolerance built in**
 
-As an operations engineer looking at these characteristics, you might be concerned because these directly impact your duties. But, who cares? Is there seriously operations engineers out there that like the stress of managing or provisioning servers? This is a chance to focus on something new and leave that headache or undifferentiated heavy lifting to cloud providers. 
+As an operations engineer looking at these characteristics, you might be concerned because these directly impact your duties. But, who cares? Is there actually operations engineers out there that like the stress of managing or provisioning servers? This is a chance to focus on something new and leave that headache or undifferentiated heavy lifting to cloud providers. 
 
 The ebook goes on to explain the evolution of DevOps which brought developers and operations closer to achieve a more efficient process. With Serverless, the responsibility of operations is impacted because the lower levels of the stack are abstracted away by the cloud provider. Probably the most important takeway for me is when the ebook wrote, `"There's no avoiding the need for operations engineers to learn to code."`
 
