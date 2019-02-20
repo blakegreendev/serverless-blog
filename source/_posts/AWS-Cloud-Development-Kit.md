@@ -14,7 +14,7 @@ In my previous posts about automation, it usually included CloudFormation or Ter
 # AWS Cloud Development Kit
 With the CDK, Infrastructure **IS** Code as opposed to YAML/JSON with CloudFormation or even HCL with Terraform. If you've ever created security groups in CloudFormation, you're probably aware of the numerous times you're required copy and paste amounting to several hundred lines of "code". Now, you can leverage the power of an actual programming language to loop and iterate on resources which shrinks the lines of code to maybe 10 or 15. The CDK has this concept of **"constructs"** which are essentially representations of AWS resources. You can use the **AWS Construct Library** for prebaked defaults written by AWS. 
 
-# Give it a go!
+# Let's give it a go!
 First, let's cover the prerequisites:
 - Install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 - Create an IAM user and configure your AWS CLI
@@ -72,6 +72,8 @@ cdk synth
 
 And you'll see all of the resources that will be created. My expression when I saw what roughly 10 lines of code can create with the CDK:
 {% asset_img giphy.gif %}
+
+Think about how quickly you would be able to reproduce this infrastructure rather than using the AWS console. Even better, think about how many lines of YAML or JSON that you didn't have to write. 
 
 Finally, you can deploy to AWS:
 {% codeblock %}

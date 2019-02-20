@@ -1,5 +1,5 @@
 ---
-title: Which programming language should I choose?
+title: Pulumi
 tags:
   - aws
 categories:
@@ -7,6 +7,5 @@ categories:
   - - Serverless
   - - Containers
   - - CI/CD
-date: 2018-10-23 12:28:09
+date: 2019-01-19 17:33:56
 ---
-
