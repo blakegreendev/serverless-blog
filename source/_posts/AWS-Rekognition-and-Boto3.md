@@ -2,11 +2,11 @@
 title: AWS Rekognition and Boto3
 tags:
   - aws
+  - ai
+  - rekognition
+  - boto3
 categories:
   - - AWS
-  - - Serverless
-  - - Containers
-  - - CI/CD
 date: 2019-02-19 14:29:00
 ---
 
