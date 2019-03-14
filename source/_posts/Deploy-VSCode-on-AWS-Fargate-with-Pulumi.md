@@ -11,12 +11,13 @@ date: 2019-03-13 15:24:22
 ---
 
 
-In this tutorial, we'll setup Visual Studio Code to run locally in a Docker container and then deploy to AWS Fargate with Pulumi. Essentially, you'll be able to run VSCode in your browser from anywhere! Anyway, let's get started!
+In this tutorial, we'll setup Visual Studio Code to run locally in a Docker container and then deploy to AWS Fargate with Pulumi. Essentially, you'll be able to run VSCode in your browser from anywhere! Let's get started!
 
 # Prerequisites
 1. Make sure [Docker](https://docs.docker.com/install/) is installed and running
 2. Install [Pulumi](https://pulumi.io/quickstart/install.html)
 3. Configure [AWS](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) credentials
+4. Install [Node](https://nodejs.org/en/download/)
 
 # Run VSCode in Docker
 First, let's run it locally and test that it works in Docker. I recommend creating a folder for the project:
@@ -74,14 +75,14 @@ pulumi new typescript --dir vscode-fargate
 
 It's going to ask for a few details (just hit Enter):
 
-*project name:* (vscode-fargate) 
-*project description:* (A minimal TypeScript Pulumi program) 
-*stack name:* (dev)
+**project name:** (vscode-fargate) 
+**project description:** (A minimal TypeScript Pulumi program) 
+**stack name:** (dev)
 
-*Do you want to perform this update?*
+**Do you want to perform this update?**
 > yes
 
-Finally, it should create the stack and display a link that will take you to the Pulumi app dashboard. 
+Finally, it should create the stack and display a permalink (i.e. Permalink: https://app.pulumi.com/bgreengo/vscode-fargate/dev/updates/1) that will take you to the Pulumi app dashboard. 
 {% asset_img screen5.png %}
 
 You'll see some awesome details here including changes, timeline, and resources created. It's very useful.
@@ -112,7 +113,7 @@ export const hostname = pulumi.interpolate `https://${listener.endpoint.hostname
 
 Next, in the vscode-fargate folder, create a folder called *app*
 
-Copy the contents of the *code-server* folder into the *app* folder within the *vscode-fargate* folder. It should look something like this (minus node_modules):
+Copy the contents of the *code-server* folder (where we ran VSCode in Docker earlier) into the *app* folder within the *vscode-fargate* folder. The file directory for the project should look something like this (minus node_modules):
 {% asset_img screen6.png %}
 
 Finally, we need to import the awsx module:
@@ -147,6 +148,9 @@ This should output the password to access VSCode running on Fargate.
 
 Head to the URL and access VSCode!
 {% asset_img screen9.png %}
+
+## Next Steps
+You might want to take it a step further and add an SSL certificate to the Load Balancer. Then you can use Route 53 and route traffic with your domain name. 
 
 # Final Thought
 I hope you were able to see how easy and powerful it is when you mix AWS and Pulumi. It's becoming more efficient to create IaC as the applications start to blend with the infrastructure. I encourage you to read through the Pulumi docs as they have other wonderful tutorials and hopefully they will continue to add more. I'm looking forward to the future of this product and how it continues to establish itself in this space.
