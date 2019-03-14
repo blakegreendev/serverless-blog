@@ -28,11 +28,13 @@ mkdir vscode
 Go ahead and clone the following repo in the new project folder which contains the Dockerfile to get up and running:
 
 ```
+cd vscode
 git clone https://github.com/bgreengo/code-server.git
 ```
 
 Next, change direcotry into **code-server** folder and run:
 ```
+cd code-server
 docker build -t vscode-docker .
 ```
 
@@ -78,9 +80,7 @@ It's going to ask for a few details (just hit Enter):
 **project name:** (vscode-fargate) 
 **project description:** (A minimal TypeScript Pulumi program) 
 **stack name:** (dev)
-
-**Do you want to perform this update?**
-> yes
+**Do you want to perform this update?** yes
 
 Finally, it should create the stack and display a permalink (i.e. Permalink: https://app.pulumi.com/bgreengo/vscode-fargate/dev/updates/1) that will take you to the Pulumi app dashboard. 
 {% asset_img screen5.png %}
