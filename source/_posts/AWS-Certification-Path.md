@@ -8,10 +8,9 @@ categories:
 date: 2018-09-08 08:49:48
 ---
 
-{% asset_img allcerts.png %}
+{% asset_img allcertsnew.png %}
 
-
-I completed my [5th AWS certification!](https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=YQ40S242KN141DS9) While certifications are no substitute for experience, these certifications have changed my career. I've been able to gain experience through obtaining AWS certifications and continued to grow as a professional. I'm also very lucky to have an employer encourage personal growth and allow me to pursue and achieve my goals. Passing these AWS certifications has provided me with credibility and validation of the skills I've gained through learning AWS services and applying them to cloud solutions. 
+I completed my [6th AWS certification!](https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=YQ40S242KN141DS9) While certifications are no substitute for experience, these certifications have changed my career. I've been able to gain experience through obtaining AWS certifications and continued to grow as a professional. I'm also very lucky to have an employer encourage personal growth and allow me to pursue and achieve my goals. Passing these AWS certifications has provided me with credibility and validation of the skills I've gained through learning AWS services and applying them to cloud solutions. 
 
 My advice to anyone starting the AWS certification journey; set **goals**, stay **focused**, and **achieve**. 
 
@@ -24,6 +23,7 @@ I took a different certification path but in my opinion, here is a list of AWS c
 3. AWS Certified SysOps Administrator – Associate
 4. AWS Certified Solutions Architect – Professional
 5. AWS Certified DevOps Engineer – Professional
+6. AWS Certified Advanced Networking - Specialty
 
 # Exam Prep
 - **Exam Blueprint** - Read through it and understand the requirements. It also provides direct links to useful whitepapers. For example, here's the [AWS Certified Solutions Architect – Associate Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_Certified_Solutions_Architect_Associate_Feb_2018_%20Exam_Guide_v1.5.2.pdf)
@@ -94,6 +94,18 @@ Key areas:
 - Auto Scaling
 - Deployment options
 
+# AWS Certified Advanced Networking - Specialty
+
+{% asset_img net-req.png %}
+
+The **AWS Certified Advanced Networking - Specialty** exam has been the most difficult AWS certification I have completed so far. It was challenging on each and every question. I remember shaking my head in disbelief because the questions were so complicated. Luckily, I had reviewed the Linux Academy course that had just come out a few days before I sat the exam and there were some useful nuggets that I remembered during the exam. Time was not an issue as the questions weren't as in-depth as the Professional certifications, but they were just extremely difficult. I would get to the point where I just had to pick an answer and move on. Process of elimination helped me here and with my networking experience and background, I was able to key in on a few answers pretty quickly. I'm happy to have passed and I really felt like I deserved this one because it took every ounce of experience to pass.  
+
+Key areas:
+- Hybrid technologies
+- DirectConnect (way more in-depth than the SA - Pro exam)
+- VPN
+- DNS with Route 53
+
 #  What's Next?
 
-I always say I will take a break from certifications but that never happens. I might go for one of the AWS Specialty certifications like Big Data or Networking. Who knows... AWS might come out with a **Serverless certification** in the near future. That would be pretty cool. 
+I will probably go for the **AWS Certified Security - Specialty** next. Amazon continues to come out with new certifications but after the security exam, I will probably pump the breaks on certifications and focus on being a better cloud architect. 
