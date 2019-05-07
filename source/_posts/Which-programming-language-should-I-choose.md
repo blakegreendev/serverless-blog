@@ -54,24 +54,4 @@ Python is also heavily used in Machine Learning and Data Science, which are extr
 
 As you can see, Python has a ton of valuable use cases and allows you to pursue a lot of different areas in IT. 
 
-# Javascript
-{% asset_img javascript-logo.png %}
-Javascript is eating the internet. Javascript is a critical layer of web applications that takes HTML and CSS and makes them dynamic. 
 
-I recommend [Scrimba](https://scrimba.com/g/gintrototypescript).
-## Javascript Above and Beyond
-
-### Frontend Frameworks
-- Vue
-- React
-
-### Typescript
-
-### Node.js
-
-# Go
-{% asset_img go.png %}
-
-## Go Above and Beyond
-
-# Final Thought
