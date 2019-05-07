@@ -12,13 +12,14 @@ AWS Amplify has certainly been one of the fastest growing services from AWS in 2
 
 It's super simple and perfect to get a proof of concept up and running really quickly. Not to mention, it's completely **serverless**! 
 
-In this tutorial, we'll create a React app to create memes powered by AWS Amplify. Besides, who doesn't love some memes.
+In this tutorial, we'll create a React app to create memes powered by AWS Amplify. Besides, who doesn't love some memes. Here's a sample of what we'll build [Greengo-Memes](https://memes.greengocloud.com) and it costs less than $1/month to run this application.
 
 # What is AWS Amplify?
 AWS Amplify makes it easy to create, configure, and implement scalable mobile and web apps powered by AWS. Amplify seamlessly provisions and manages your mobile backend and provides a simple framework to easily integrate your backend with your iOS, Android, Web, and React Native frontends. Amplify also automates the application release process of both your frontend and backend allowing you to deliver features faster.
 
 # Requirements
 - Install Node
+- Github account
 - AWS account
 
 # Local Development
@@ -70,7 +71,7 @@ Finally, click Save and Deploy!
 After a few minutes, the app will successfully deploy and will be available at a URL provided by Amplify. However, I want to use a custom domain and make it easy for people to find **GreenGo-Memes**! Click on Domain management on the side panel:
 {% asset_img amplify6.png %}
 
-I wanted to exclude the root domain (since that's where I serve my blog) so I created a subdomain called memes.greengocloud.com and click Save. 
+I wanted to exclude the root domain (since that's where I serve my blog) so I created a subdomain called https://memes.greengocloud.com and click Save. 
 {% asset_img amplify7.png %}
 *NOTE:* This will take quite a bit of time while it is pending verification/deployment.
 
