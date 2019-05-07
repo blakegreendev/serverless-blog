@@ -95,6 +95,10 @@ Commit and push the changes to the Gihub repo and Amplify will automatically dep
 If you refresh the page, you'll see the new picture deployed on AWS Amplify!
 {% asset_img amplify9.png %}
 
+# Make a Meme
+Click on one of the pictures and let's make a meme! Click Download Meme! to save locally.
+{% asset_img meme.png %}
+
 Check back after a while and see if your domain name has been added to your Amplify app but that's pretty much it! Super simple and easy to use, AWS Amplify is perfect for getting up and running in no time. It's especially fun for these little project where you can make a silly app that everyone can use.
 
 
