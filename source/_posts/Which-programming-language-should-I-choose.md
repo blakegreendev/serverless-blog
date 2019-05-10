@@ -1,11 +1,10 @@
 ---
 title: Which programming language should I choose?
 tags:
-  - aws
-  - programming
+  - python
+  - serverless
 categories:
-  - - AWS
-  - - Serverless
+  - - Programming
 date: 2018-10-23 12:28:09
 ---
 
