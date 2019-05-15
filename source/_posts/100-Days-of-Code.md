@@ -36,6 +36,11 @@ else:
 Sorry there are still 229 days until Christmas!
 ```
 # Days 4-6: Collections
+In this three day span, I learned about the collections module including namedtuples, defaultdicts, counter, and deque (pronounced "deck"). It was very interesting to see how useful namedtuples can be to make more readable code and counter is a handy one liner that I'm sure I will use in the future. Deque was used for performance reasons and using Jupyter Lab I was able to see the comparison in the amount of time the deque took as opposed to a list. 
+
+Link to the docs: https://docs.python.org/3.7/library/collections.html
+
+Next, we grabbed a dataset containing some information about movies. We used the collections module to parse through the data and show a list of movies by directors. We also used the counter to show how many total movies were created by the 10 most common directors. 
 
 # Days 7-9: Data Structures
 
