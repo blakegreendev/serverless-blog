@@ -2,10 +2,10 @@
 title: Containers vs Serverless
 tags:
   - aws
+  - serverless
+  - containers
 categories:
   - AWS
-  - Serverless
-  - Containers
 date: 2018-10-06 18:45:24
 ---
 

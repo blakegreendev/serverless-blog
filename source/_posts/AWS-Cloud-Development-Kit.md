@@ -70,7 +70,9 @@ cdk synth
 {% endcodeblock %}
 
 
-And you'll see all of the resources that will be created. My expression when I saw what roughly 10 lines of code can create with the CDK:
+And you'll see all of the resources that will be created. This is the raw CloudFormation that gets generated when you the CDK compiles the code.
+
+My expression when I saw what roughly 10 lines of code can create with the CDK:
 {% asset_img giphy.gif %}
 
 Think about how quickly you would be able to reproduce this infrastructure rather than using the AWS console. Even better, think about how many lines of YAML or JSON that you didn't have to write. 

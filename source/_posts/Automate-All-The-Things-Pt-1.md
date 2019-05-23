@@ -4,10 +4,9 @@ tags:
   - aws
   - terraform
   - cloudformation
+  - IaC
 categories:
   - - AWS
-  - - IaC
-  - - CI/CD
 date: 2018-08-03 08:28:03
 ---
 

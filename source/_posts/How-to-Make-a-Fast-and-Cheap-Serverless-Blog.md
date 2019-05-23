@@ -2,10 +2,9 @@
 title: How to Make a Cheap, Fast, and Low Maintenance Serverless Blog on AWS
 tags:
   - aws
+  - serverless
 categories:
   - - AWS
-  - - Serverless
-  - - CI/CD
 date: 2018-08-28 12:09:18
 ---
 

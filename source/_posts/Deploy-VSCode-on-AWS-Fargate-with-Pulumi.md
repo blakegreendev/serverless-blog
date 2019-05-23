@@ -2,11 +2,11 @@
 title: Deploy VSCode on AWS Fargate with Pulumi
 tags:
   - aws
+  - serverless
+  - containers
+  - ci/cd
 categories:
   - - AWS
-  - - Serverless
-  - - Containers
-  - - CI/CD
 date: 2019-03-13 15:24:22
 ---
 

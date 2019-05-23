@@ -4,9 +4,6 @@ tags:
   - aws
 categories:
   - AWS
-  - Serverless
-  - Containers
-  - CI/CD
 date: 2018-10-22 15:17:36
 ---
 
