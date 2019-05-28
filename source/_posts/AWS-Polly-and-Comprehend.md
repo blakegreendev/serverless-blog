@@ -47,8 +47,36 @@ jupyter lab
 Amazon Polly is a service that turns text into lifelike speech, allowing you to create applications that talk, and build entirely new categories of speech-enabled products. Amazon Polly is a Text-to-Speech service that uses advanced deep learning technologies to synthesize speech that sounds like a human voice.
 
 In the Jupyter Lab, copy the following code and enjoy:
+{% codeblock lang:python %}
+import os
+import boto3
+import pyaudio
+
+polly = boto3.client("polly")
+audio = pyaudio.PyAudio()
+
+def speak(text, voice):
+    resp = polly.synthesize_speech(
+        Text=text,
+        TextType="text",
+        OutputFormat="pcm",
+        VoiceId=voice
+    )
+    stream = audio.open(
+        format=audio.get_format_from_width(width=2),
+        channels=1, rate=16000, output=True
+    )
+    stream.write(resp['AudioStream'].read())
+    stream.stop_stream()
+    stream.close()
+{% endcodeblock %}
+In the next cell, type:
+```
+speak("Hello, my name is Inigo Montoya. You killed my father. Prepare to die.", "Enrique")
+```
+Here's a screen shot:
 {%asset_img polly.png%}
-**Press SHIFT+ENTER to go to the next cell**
+**Note: In Jupyter notebooks, you press SHIFT+ENTER to go to the next cell**
 
 Does it sound familiar? It was the closest voice I could find to Inigo Montoya from Princess Bride but you can play with the other voices in the [Boto3 Docs for AWS Polly](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/polly.html#Polly.Client.start_speech_synthesis_task)
 {% youtube 6JGp7Meg42U %}
@@ -58,7 +86,18 @@ Amazon Comprehend is a natural language processing (NLP) service that uses machi
 
 Amazon Comprehend uses machine learning to help you uncover the insights and relationships in your unstructured data. The service identifies the language of the text; extracts key phrases, places, people, brands, or events; understands how positive or negative the text is; analyzes text using tokenization and parts of speech; and automatically organizes a collection of text files by topic.
 
-Create a new Jupyter notebook and in three lines you can get sentiment analysis on certain phrases you pass to the service:
+Create a new Jupyter notebook and in three lines you can get sentiment analysis on certain phrases you pass to the service.
+
+Here's the code:
+{% codeblock lang:python %}
+import boto3
+
+comprehend = boto3.client("comprehend")
+
+comprehend.detect_sentiment(Text="I love learning AWS", LanguageCode="en")
+
+{% endcodeblock %}
+Here's some screenshots from the Jupyter notebook:
 {%asset_img comp.png%}
 **The sentiment was 97% positive.**
 
