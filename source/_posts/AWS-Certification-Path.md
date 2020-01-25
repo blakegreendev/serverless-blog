@@ -8,9 +8,9 @@ categories:
 date: 2018-09-08 08:49:48
 ---
 
-{% asset_img allcertsnew.png %}
+{% asset_img 7certs.png %}
 
-I completed my [6th AWS certification!](https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=YQ40S242KN141DS9) While certifications are no substitute for experience, these certifications have changed my career. I've been able to gain experience through obtaining AWS certifications and continued to grow as a professional. I'm also very lucky to have an employer encourage personal growth and allow me to pursue and achieve my goals. Passing these AWS certifications has provided me with credibility and validation of the skills I've gained through learning AWS services and applying them to cloud solutions. 
+I have completed my [7th AWS certification!](https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=YQ40S242KN141DS9) While certifications are no substitute for experience, these certifications have changed my career. I've been able to gain experience through obtaining AWS certifications and continued to grow as a professional. I'm also very lucky to have an employer encourage personal growth and allow me to pursue and achieve my goals. Passing these AWS certifications has provided me with credibility and validation of the skills I've gained through learning AWS services and applying them to cloud solutions. 
 
 My advice to anyone starting the AWS certification journey; set **goals**, stay **focused**, and **achieve**. 
 
@@ -21,9 +21,10 @@ I took a different certification path but in my opinion, here is a list of AWS c
 1. AWS Certified Developer – Associate
 2. AWS Certified Solutions Architect – Associate
 3. AWS Certified SysOps Administrator – Associate
-4. AWS Certified Solutions Architect – Professional
-5. AWS Certified DevOps Engineer – Professional
-6. AWS Certified Advanced Networking - Specialty
+4. AWS Certified Security - Specialty
+5. AWS Certified Solutions Architect – Professional
+6. AWS Certified DevOps Engineer – Professional
+7. AWS Certified Advanced Networking - Specialty
 
 # Exam Prep
 - **Exam Blueprint** - Read through it and understand the requirements. It also provides direct links to useful whitepapers. For example, here's the [AWS Certified Solutions Architect – Associate Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_Certified_Solutions_Architect_Associate_Feb_2018_%20Exam_Guide_v1.5.2.pdf)
@@ -106,6 +107,15 @@ Key areas:
 - VPN
 - DNS with Route 53
 
+# AWS Certified Security - Specialty
+
+{% asset_img sec-req.png %}
+
+The **AWS Certified Security - Specialty** exam was more difficult than I anticipated but I prevailed. I think the key focus area was on encrytion. During the exam, I remember wishing that I spent more time on KMS (key management service). There were quite a few questions that went pretty deep on key policies, IAM policies, and grants. Obviously, being able to identify when IAM policy are over or under permissioned to perform a particular task was critical. For example, picking out when the IAM policy has an * and knowing how it applies to the services that it is either allowing or blocking. I was surprised to see Amazon Macie on the exam, which is a security service that uses machine learning to automatically discover, classify, and protect sensitive data in AWS. Lastly, I would say it's important to understand AWS CloudWatch for logs and metrics. Also, CloudWatch Events vs CloudTrail for more real time alerts.
+
+Key areas:
+- Encryption, Encryption, Encryption!
+
 #  What's Next?
 
-I will probably go for the **AWS Certified Security - Specialty** next. Amazon continues to come out with new certifications but after the security exam, I will probably pump the breaks on certifications and focus on being a better cloud architect. 
+That's all for AWS Certifications for me! At least until it's time to recertify all my certs next year... yikes! Maybe eventually I'll look at Big Data (which I believe will switch to Data Analytics or something) or the Machine Learning certification. I find both very interesting but I don't work with those services enough to feel comfortable going for the certification. 

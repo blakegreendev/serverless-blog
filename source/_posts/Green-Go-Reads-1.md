@@ -1,5 +1,5 @@
 ---
-title: Green Go Reads - Vol. 1
+title: Green Go Reads - Serverless DevOps
 tags:
   - aws
   - serverless
