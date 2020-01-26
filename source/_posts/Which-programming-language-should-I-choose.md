@@ -15,7 +15,7 @@ Say you embrace the change and want to begin this new career path. Where do you 
 In my opinion, there is currently three languages that will help you adapt to this new wave of IT. 
 - **Python**
 - **Javascript**
-- **Go**
+- **Rust**
 
 # Python
 {% asset_img python.png %}
