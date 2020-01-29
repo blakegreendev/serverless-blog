@@ -136,11 +136,16 @@ First of all, I think it's pretty cool when you only need 66 lines of code (with
 cdk synth twitter-blog > template.yml
 ```
 
-- **Lambda Layers (lines 18-34):** Creates the layers and tells it where to get the local dependencies (twitter, requests, and bs4).
-- **Lambda (lines 37-44):** Creates the function with local asset from lambda folder.
-- **Lambda Role (lines 47-51):** Gives the execution role the permission to get the SSM parameters where the Twitter API keys are stored.
-- **CloudWatch Rule (lines 54-63):** Create the CloudWatch rule that triggers every Friday at 6pm.
-- **Add tartget (line 66):** Adds the CloudWatch rule as an event source so the Lambda function will execute every Friday at 6pm.
+- **Lambda Layers (lines 18-34):** 
+  - Creates the layers and tells it where to get the local dependencies (twitter, requests, and bs4).
+- **Lambda (lines 37-44):** 
+  - Creates the function with local asset from lambda folder.
+- **Lambda Role (lines 47-51):** 
+  - Gives the execution role the permission to get the SSM parameters where the Twitter API keys are stored.
+- **CloudWatch Rule (lines 54-63):** 
+  - Create the CloudWatch rule that triggers every Friday at 6pm.
+- **Add tartget (line 66):** 
+  - Adds the CloudWatch rule as an event source so the Lambda function will execute every Friday at 6pm.
 
 # AWS LAMBDA LAYERS
 
@@ -151,7 +156,7 @@ In the root directory, I created a folder called **layers** and then a folder fo
 $ pip install twitter -t .
 ```
 
-It folder structure should look like this:
+The folder structure should look like this:
 {% asset_img layers.png %}
 
 # AWS LAMBDA
