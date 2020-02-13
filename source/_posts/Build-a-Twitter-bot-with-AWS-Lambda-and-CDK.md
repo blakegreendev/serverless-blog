@@ -13,7 +13,7 @@ date: 2020-01-24 09:49:25
 
 I never know if my blog posts are any good, but I do it anyway. My hope is that they will help someone out there and encourage folks to keep learning out loud as I have tried to do. While I feel lucky for those that have visited my blog, I wanted to find a more consistent way to get my posts out to the world. I thought... what if there was a way to randomly select one of my previous blog posts and post it on Twitter every Friday at 6pm. Hopefully that would generate more interest and allow people on Twitter to easily link and share my blog posts. 
 
-As a CDK fanboy, I immediately decided that I would build this using the CDK. The CDK app would create the CloudWatch rule that would run every Friday at 6pm using a cron expression. The CloudWatch rule would then trigger a Lambda function that would go off and scrape a random blog post from the archives and then use the Twitter API to post a tweet.
+As a CDK fan, I immediately decided that I would build this using the CDK. The CDK app would create the CloudWatch rule that would run every Friday at 6pm using a cron expression. The CloudWatch rule would then trigger a Lambda function that would go off and scrape a random blog post from the archives and then use the Twitter API to post a tweet.
 
 {% asset_img twitterbot.png %}
 

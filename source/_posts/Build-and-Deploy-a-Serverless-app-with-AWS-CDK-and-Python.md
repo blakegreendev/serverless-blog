@@ -81,7 +81,7 @@ npm i -g aws-cdk
 In an empty and separate folder, let's intialize the CDK project:
 ```
 mkdir cdk_hack && cd cdk_hack
-cdk init --language python
+cdk init app --language python
 ```
 
 This creates the skeleton of the project for the CDK application which should looks something like this:
@@ -115,21 +115,102 @@ Last step before we can start coding the infrastructure is moving the webapp dir
 mv webapp cdk_hack/cdk_hack/
 ```
 
-It should look something like this:
+It should look something like this (don't worry, we'll cover tests later):
 {% asset_img cdk2-struct.png %}
 
+Now you can open ```cdk_hack_stack.py``` because this will be where the meat and potatoes of the infrastructure as code will live. Once you have that open, there will be some boilerplate code which you can overwrite with the following code:
+
+{% codeblock lang:python %}
+import os
+from aws_cdk import (
+    core,
+    aws_ec2 as ec2,
+    aws_ecs as ecs,
+    aws_ecs_patterns as ecs_patterns,
+    aws_ecr_assets as ecr_assets,
+    aws_certificatemanager as certmgr,
+    aws_route53 as route53,
+)
+
+
+class CdkHackStack(core.Stack):
+
+    def __init__(self, scope: core.Construct, id: str, **kwargs) -> None:
+        super().__init__(scope, id, **kwargs)
+
+        ## Create the VPC 
+        vpc = ec2.Vpc(
+            self, "VPC",
+            max_azs=2
+        )
+
+        ## Create the ECS Cluster
+        cluster = ecs.Cluster(
+            self, "Cluster",
+            vpc=vpc
+        )
+
+        ## Lookup the Route 53 hosted zone for greengocloud.com
+        hosted_zone = route53.HostedZone.from_lookup(
+            self, "HostedZone",
+            domain_name="greengocloud.com",
+            private_zone=False
+        )
+
+        ## Create a DNS validated SSL certificate for the loadbalancer 
+        certificate = certmgr.DnsValidatedCertificate(
+            self, "HackCertificate",
+            domain_name="hackernews.greengocloud.com",
+            hosted_zone=hosted_zone
+        )
+
+        ## Use the ApplicationLoadBalancedFargateService construct to pull the local Dockerfile,
+        ## push the image to ECR, and deploy to Fargate.
+        app = ecs_patterns.ApplicationLoadBalancedFargateService(
+            self, 'Webservice',
+            cluster=cluster,
+            domain_name="hackernews.greengocloud.com",
+            domain_zone=hosted_zone,
+            certificate=certificate,
+            assign_public_ip=True,
+            cpu=256,
+            memory_limit_mib=512,
+            desired_count=1,
+            task_image_options=ecs_patterns.ApplicationLoadBalancedTaskImageOptions(
+                image=ecs.ContainerImage.from_asset(
+                    os.path.join(os.path.dirname(__file__), 'webapp')
+                ),
+                container_port=8080,
+            )
+        )
+
+        ## Add a custom health check to the target group in the ApplicationLoadBalancedFargateService construct.
+        app.target_group.configure_health_check(port='8080', healthy_http_codes='302')
+{% endcodeblock %}
+
+You are ready to deploy!
+I always like to synthesize the app to 1. make sure it compiles properly and 2. see how many lines of raw CloudFormation it's going to generate. You can do this by running the following command:
 ```
-export USER_AWS_ACCOUNT='111111111'
-export USER_AWS_REGION='us-west-2'
+cdk synth cdk-hack > template.yml
 ```
+
+After you get over how much raw CloudFormation you **didn't** have to write, you are ready to deploy with the following command:
+```
+cdk deploy
+```
+
+Eventually, you will get the output with the URL using your custom domain name and it will resolve to the fully serverless application running in Fargate!
 
 ## Test the Infrastructure
 The pytest framework makes it easy to write small yet functional testing for applications and libraries. Since we're using Python to model our infrastructure, we can use pytest to validate our resources. 
 
-For example, let's say we 
+For example, let's say we want to make sure that the Fargate service always has 512mb of memory. We can write a test so that when this application goes through a proper CI/CD pipeline, it will validate that the value is correct otherwise it will fail. This is great when you want to create these checks on the infrastructure prior to commiting a potential mistake or bug into production environments.
+
+First, install pytest within the virtual environment by running ```pip install pytest``` and then I like to make a folder in the root called tests. Within the tests folder, you'll need two files called ```__init__.py``` and ```test_cdk-hack.py```. In the 
 
 {% codeblock lang:python %}
 import json
+import os
 import pytest
 
 from aws_cdk import core
@@ -137,7 +218,9 @@ from cdk_hack.cdk_hack_stack import CdkHackStack
 
 def get_template():
     app = core.App()
-    CdkHackStack(app, "cdk-hack", env=core.Environment(account="987092829714", region="us-west-2"))
+    CdkHackStack(app, "cdk-hack", env=core.Environment(
+      os.environ["CDK_DEFAULT_ACCOUNT"], 
+      region=os.environ["CDK_DEFAULT_REGION"]))
     return json.dumps(app.synth().get_stack("cdk-hack").template)
 
 def test_ecs_service():
