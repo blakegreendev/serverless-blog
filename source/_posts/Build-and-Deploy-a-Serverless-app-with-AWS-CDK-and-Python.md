@@ -59,6 +59,9 @@ CMD [ "npm", "start" ]
 {% endcodeblock %}
 
 I renamed the directory to *webapp* because we'll need to move it into the CDK app later.
+```
+mv vue-hackernews-2.0 webapp
+```
 
 It should looks something like this:
 {% asset_img app-struct.png %} 
@@ -120,7 +123,7 @@ mv webapp cdk_hack/cdk_hack/
 It should look something like this (don't worry, we'll cover tests later):
 {% asset_img cdk2-struct.png %}
 
-Now you can open ```cdk_hack_stack.py``` because this will be where the meat and potatoes of the infrastructure as code will live. Once you have that open, there will be some boilerplate code which you can overwrite with the following code:
+Now you can open **cdk_hack_stack.py** because this will be where the meat and potatoes of the infrastructure as code will live. Once you have that open, there will be some boilerplate code which you can overwrite with the following code:
 
 {% codeblock lang:python %}
 import os
@@ -208,7 +211,11 @@ The pytest framework makes it easy to write small yet functional testing for app
 
 For example, let's say we want to make sure that the Fargate service always has 512mb of memory. We can write a test so that when this application goes through a proper CI/CD pipeline, it will validate that the value is correct otherwise it will fail. This is great when you want to create these checks on the infrastructure prior to commiting a potential mistake or bug into production environments.
 
-First, install pytest within the virtual environment by running ```pip install pytest``` and then I like to make a folder in the root called tests. Within the tests folder, you'll need two files called ```__init__.py``` and ```test_cdk-hack.py```. In the 
+First, install pytest within the virtual environment by running 
+```
+pip install pytest
+``` 
+and then I like to make a folder in the root called tests. Within the tests folder, you'll need two files called **__init__.py** and **test_cdk-hack.py**.
 
 {% codeblock lang:python %}
 import json
