@@ -212,9 +212,11 @@ The pytest framework makes it easy to write small yet functional testing for app
 For example, let's say we want to make sure that the Fargate service always has 512mb of memory. We can write a test so that when this application goes through a proper CI/CD pipeline, it will validate that the value is correct otherwise it will fail. This is great when you want to create these checks on the infrastructure prior to commiting a potential mistake or bug into production environments.
 
 First, install pytest within the virtual environment by running 
+
 ```
 pip install pytest
-``` 
+```
+
 and then I like to make a folder in the root called tests. Within the tests folder, you'll need two files called **__init__.py** and **test_cdk-hack.py**.
 
 {% codeblock lang:python %}
@@ -237,6 +239,8 @@ def test_ecs_service():
 {% endcodeblock %}
 
 # Clean Up
+
+To remove all the resources from the CDK app, just run the following command:
 
 ```
 cdk destroy
