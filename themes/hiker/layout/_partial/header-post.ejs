@@ -26,7 +26,7 @@
             <div class="navbar-collapse collapse">
               <ul class="hnav navbar-nav">
                 <% for (var i in theme.menu){ %>
-                  <li> <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= __(i.toLowerCase()) %></a> </li>
+                  <li> <a class="main-nav-link" target="_blank" href="<%- url_for(theme.menu[i]) %>"><%= __(i.toLowerCase()) %></a> </li>
                 <% } %>
                   <li><%- partial('search/index') %></li>
             </div>

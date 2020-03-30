@@ -220,7 +220,7 @@
   <div class="intro-navigate">
       <p class="navigater-list">
         <% for (var i in theme.menu){ %>
-          <a id="beautifont" class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= __(i.toLowerCase()) %></a>
+          <a id="beautifont" class="main-nav-link" target="_blank" href="<%- url_for(theme.menu[i]) %>"><%= __(i.toLowerCase()) %></a>
         <% } %>
       </p>
   </div>
